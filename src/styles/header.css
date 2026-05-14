@@ -5,70 +5,83 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: min(1180px, calc(100% - 32px));
-  min-height: 74px;
-  margin: 12px auto 0;
-  padding: 12px 14px;
-  border: 1px solid rgba(216, 231, 248, 0.9);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 18px 50px rgba(17, 70, 132, 0.08);
-  backdrop-filter: blur(18px);
+  height: 103px;
+  padding: 0 max(42px, calc((100vw - 1530px) / 2));
+  border-bottom: 1px solid #ccdaef;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 22px rgba(44, 91, 150, 0.13);
+  backdrop-filter: blur(14px);
 }
 
 .brand,
-.site-nav,
-.hero-actions,
-.hero-facts,
-.site-footer {
-  display: flex;
+.footer-brand {
+  display: inline-flex;
   align-items: center;
+  gap: 12px;
 }
 
-.brand {
-  gap: 10px;
-  font-size: 18px;
-  font-weight: 800;
-}
-
-.brand img {
-  width: 42px;
-  height: 42px;
-  border-radius: 8px;
+.brand img,
+.footer-brand img {
   object-fit: contain;
+  filter: drop-shadow(0 6px 8px rgba(11, 80, 190, 0.16));
+}
+
+.brand strong,
+.footer-brand strong {
+  display: block;
+  color: var(--blue);
+  font-size: 31px;
+  font-weight: 900;
+  line-height: 0.95;
+}
+
+.brand small,
+.footer-brand small {
+  display: block;
+  margin-top: 4px;
+  color: #244171;
+  font-size: 14px;
+  line-height: 1;
 }
 
 .site-nav {
-  gap: 26px;
-  color: var(--muted);
-  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 54px;
+  height: 100%;
+  color: #031941;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .site-nav a {
-  padding: 8px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.site-nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--blue);
+  content: "";
+  opacity: 0;
+  transform: translateY(4px);
+  transition: 180ms var(--ease);
 }
 
 .site-nav a:hover,
-.header-contact:hover,
-.site-footer a:hover {
+.site-nav a.active {
   color: var(--blue);
 }
 
-.header-contact,
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.header-contact {
-  padding: 0 16px;
-  color: var(--blue-deep);
-  border: 1px solid var(--line);
-  background: var(--paper);
+.site-nav a:hover::after,
+.site-nav a.active::after {
+  opacity: 1;
+  transform: translateY(0);
 }
