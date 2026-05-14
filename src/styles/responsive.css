@@ -19,8 +19,7 @@
     grid-template-columns: 1fr;
   }
 
-  .feature-item:not(:last-child)::after,
-  .site-footer::before {
+  .feature-item:not(:last-child)::after {
     display: none;
   }
 
@@ -168,14 +167,15 @@
 
   .site-footer {
     grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 24px 0;
+    gap: 12px;
+    padding: 18px 0 22px;
   }
 
   .site-footer p,
   .footer-mail {
     grid-column: 1;
     justify-self: start;
+    white-space: normal;
   }
 }
 
