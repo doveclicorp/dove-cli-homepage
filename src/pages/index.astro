@@ -1,0 +1,44 @@
+---
+import AppFooter from '../components/AppFooter.astro';
+import AppHeader from '../components/AppHeader.astro';
+import ContactSection from '../components/ContactSection.astro';
+import FeatureSection from '../components/FeatureSection.astro';
+import Hero from '../components/Hero.astro';
+import ProfileSection from '../components/ProfileSection.astro';
+import '../styles/global.css';
+
+const title = 'DoveCli | 개인 개발자 KIM SANG WOO';
+const description =
+  'DoveCli는 KIM SANG WOO가 운영하는 개인 개발자 계정입니다. 모바일 앱, CLI 도구, 작고 명료한 인터페이스를 만듭니다.';
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href="https://dovecli.com/" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0f5fd7" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dovecli.com/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://dovecli.com/assets/dove-cli-header.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <AppHeader />
+    <main>
+      <Hero />
+      <FeatureSection />
+      <ProfileSection />
+      <ContactSection />
+    </main>
+    <AppFooter />
+  </body>
+</html>

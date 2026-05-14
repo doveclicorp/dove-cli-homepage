@@ -1,0 +1,162 @@
+@media (max-width: 920px) {
+  .site-header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .site-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .hero,
+  .about-inner,
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    gap: 20px;
+    min-height: auto;
+    padding-top: 64px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .hero-visual {
+    min-height: 470px;
+  }
+
+  .mascot-frame {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    animation-name: floatyCentered;
+  }
+
+  .feature-grid,
+  .principles {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    max-width: 520px;
+  }
+}
+
+@keyframes floatyCentered {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-12px);
+  }
+}
+
+@media (max-width: 640px) {
+  .section-shell,
+  .site-footer {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .site-header {
+    width: min(100% - 20px, 1180px);
+    margin-top: 8px;
+  }
+
+  .brand {
+    font-size: 17px;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .header-contact {
+    padding: 0 12px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .hero-description {
+    font-size: 17px;
+  }
+
+  .hero-facts {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    min-height: 380px;
+  }
+
+  .mascot-frame {
+    width: min(340px, 92%);
+    bottom: 8px;
+  }
+
+  .section-heading h2,
+  .about-copy h2,
+  .contact-copy h2 {
+    font-size: 32px;
+  }
+
+  .feature-section,
+  .about-band,
+  .contact-section {
+    padding: 70px 0;
+  }
+
+  .feature-card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .profile-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card svg {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+  .site-footer {
+    display: block;
+  }
+
+  .site-footer a {
+    display: inline-block;
+    margin-top: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}

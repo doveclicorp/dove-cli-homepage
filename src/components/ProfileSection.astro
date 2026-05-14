@@ -1,0 +1,43 @@
+---
+const principles = ['명확한 목적', '가벼운 사용성', '꾸준한 개선'];
+---
+
+<section id="about" class="about-band" aria-labelledby="about-title">
+  <div class="about-inner section-shell">
+    <div class="about-copy reveal">
+      <p class="section-label">DoveCli 소개</p>
+      <h2 id="about-title">개인 개발자 계정을 위한 공식 소개 페이지</h2>
+      <p>
+        이 사이트는 Play Console 같은 서비스에 등록되는 개발자 웹사이트입니다.
+        DoveCli는 KIM SANG WOO가 운영하며, Dove CLI Corporation이라는 이름으로
+        앱과 도구를 정리해 나갑니다.
+      </p>
+    </div>
+
+    <div id="profile" class="profile-panel reveal" aria-label="개발자 프로필">
+      <div class="profile-row">
+        <span>개발자</span>
+        <strong>KIM SANG WOO</strong>
+      </div>
+      <div class="profile-row">
+        <span>닉네임</span>
+        <strong>DoveCli</strong>
+      </div>
+      <div class="profile-row">
+        <span>연락처</span>
+        <a href="mailto:doveclicorp@gmail.com">doveclicorp@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="principles section-shell" aria-label="개발 원칙">
+    {
+      principles.map((item) => (
+        <div class="principle reveal">
+          <span aria-hidden="true"></span>
+          <p>{item}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

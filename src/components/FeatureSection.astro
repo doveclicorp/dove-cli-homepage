@@ -1,0 +1,42 @@
+---
+const features = [
+  {
+    title: '모바일 앱',
+    body: '플레이스토어 배포를 기준으로, 사용자가 바로 이해할 수 있는 작은 앱을 만듭니다.',
+    icon: 'phone',
+  },
+  {
+    title: 'CLI 도구',
+    body: '반복 작업을 줄이고 개발 흐름을 정리하는 명령줄 도구와 자동화를 설계합니다.',
+    icon: 'terminal',
+  },
+  {
+    title: '깔끔한 인터페이스',
+    body: '기능을 드러내되 과장하지 않는 UI, 읽기 쉬운 문장, 안정적인 반응형 화면을 지향합니다.',
+    icon: 'layout',
+  },
+];
+---
+
+<section id="work" class="feature-section section-shell" aria-labelledby="work-title">
+  <div class="section-heading reveal">
+    <p class="section-label">제작 분야</p>
+    <h2 id="work-title">필요한 기능을 단순하고 안정적으로</h2>
+    <p>
+      DoveCli는 큰 약속보다 실제로 동작하는 작은 결과물을 중요하게 봅니다. 앱,
+      도구, 웹 화면이 같은 기준으로 정리됩니다.
+    </p>
+  </div>
+
+  <div class="feature-grid">
+    {
+      features.map((feature) => (
+        <article class="feature-card reveal">
+          <div class={`feature-icon ${feature.icon}`} aria-hidden="true"></div>
+          <h3>{feature.title}</h3>
+          <p>{feature.body}</p>
+        </article>
+      ))
+    }
+  </div>
+</section>
